@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appimages - Not very good innit.</title>
+  <link href="/static/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="categoryHeader"> Appkill</h1>
+        
+<h1 class="title">
+  Appimages Kinda Sorta Suck©™
+</h1>
+<p class="subtitle"><strong>2024-06-06</strong></p>
+<h1>TLDR: Who let bro cook 💀💀💀💀💀💀</h1>
+<p> Appimages are similar to Flatpaks and Snaps in trying to provide cross-distro app support, however unlike Flatpaks and Snaps using more conventional strategies of deployment and technologies on the Linux Desktop, attempts to imitate Microsoft's Windows and Apple's MacOS .exe/.msi and .dmgs respectively. However, it has many technological flaws compared to Flatpaks and is overall user-unfriendly and poorly executed. This article is building off <a href="https://github.com/boredsquirrel/dont-use-appimages">This article by boredsquirrel. </a></p>
+<p> TLDR: Appimages tried to imitate .exes and failed to cook. Do not let them cook. Take away the utensils and them evacuate from the kitchen at once</p>
+<h2> No, this is not an attack on your Desktop icons.</h2>
+<p>One thing I dislike about the aforementioned article is the side-tangents on other desktop aspects. For example:</p>   
+<p> "Instead users follow strange habits like placing the files on their desktop" - <a href="https://github.com/boredsquirrel/dont-use-appimages?tab=readme-ov-file#usability-issues" target="_blank"> Usability Issues</a></p>
+<p> This article will <b>not</b> be an attack on how you personally wish to use your computer - use Desktop Icons, Burn them in a fire, its your Linux! Use your linux desktop however you please, and this discouragement of common user activity undermines the authers original point somewhat.</p>
+<p> To clarify: this article will be solely about Appimages failings to quote en quote cook itself, and how it fails to stack up to Flatpak, not any other aspect of how one wishes to use their desktop.</p>
+<p> With this disclaimer out the way, lets delve into the problems with Appimages.</p>
+<h2> Lack of a security model (or in other words, good luck with sandboxing).</h2>
+<ul>
+    <li> By default, Appimages do not do any sand-boxing of applications, and have 0 way to configure this out of the box.</li>
+    <li> By comparison, Flatpaks have sand-boxing out of the box (even if it isn't always perfect) which can now even be configured using a GUI like <a href="https://github.com/KDE/flatpak-kcm" target="_blank">KDE Settings</a> or <a href="https://flathub.org/apps/com.github.tchx84.Flatseal" target="_blank">Flatseal</a></li>
+    <li> This lack of sand-boxing is a security nightmare - and this has been largely unaddressed for multiple years, with even established solutions like Firejail or Bubblewrap being ineffective, having their security model degraded or straight up just not working with appimages.</li>
+</ul>
+<h2> Worse Desktop Integration (or in other words, why doesn't it appear in my start menu?!?!).</h2>
+<ul>
+    <li> Unlike every other form of installing applications on Linux (Traditional RPMs/DEBs, Nix packages, Snaps, Flatpaks and even .tar archives), Appimages will not make a .desktop file.</li>
+    <li> This trudging through file directories, or making clunky and fragile .desktop files yourself.</li>
+    <li> While adding them to your desktop will fix this issue, its not something all users will want to do (evidently part of this group, the <a href="https://discussion.fedoraproject.org/u/boredsquirrel/summary">author boredsquirrel</a> of the original article that sparked this article, surprisingly a KDE contributor and not a GNOME one given their hate of desktop icons lmao).</li>
+</ul>
+<h2> Lack of central repositories (or in other words, how do I update this app?!?!).</h2>
+    <li> Appimages go against the number one rule of the Internet - never download random files off the Internet, especially random executables. </li>
+    <li> Frankly, putting the terrible security implications, it is less user-friendly then it seems on paper, by account of it being more familiar to Windows and MacOS converts. </li>
+    <li> The user has to be much more proactive to not download malware, if they are using a different CPU architecture (which will be more common in following years) they need to be careful to download the correct file for their architecture, and updates and installing apps can not be handled in the same application.</li>
+    <li> All of these are handled by repository based systems of software that Linux is world-class in and well-known (for better or worse).</li>
+    <li> This should not be squandered and replaced with an objectively worse way to obtain apps.</li>
+</h2>
+<!-- <h2> Duplication of libraries (or in other words, Flatpaks aren't as bloated as you think).</h2>
+<h2> Uses outdated fuse (or in other words, I bricked my Ubuntu trying to use an appimage).</h2>
+<h2> Lack of distro support.</h2> -->
+<p>Overall, it is obvious why a lot of distros and app makers have not decided to use appimages- their downsides are plenty. If you like Appimages, then it is your choice to use them, but keep the following. 
+But I beg of you app makers, PLEASE DONT DISTRIBUTE APPS AS APPIMAGES PLEASE. Save yourself and your clients a lot of hassle and use <a href="https://docs.flatpak.org/en/latest/">Flatpak</a> instead.</p>
+
+
+      </div>
+    </section>
+  </main>
+</body>
+
+<div class="myfooter">
+  <footer> 
+      <nav>
+        <p>
+          © 2024 Article Written by <a href="https://zoey.blahaj.land/">Zoey Ahmed.</a>
+        </p>
+        <p>
+          <a href="https://github.com/ZoeTheTransHoe/PersonalWebsite" target="_blank" rel="noopener noreferrer">  Code</a> for the website, licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">the GPL-3</a>
+        </p>
+    </footer>
+  </div>
+</html>
+
